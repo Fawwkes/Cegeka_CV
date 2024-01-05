@@ -5,7 +5,6 @@
 **Clone the Repository**
 ```
 git clone https://github.com/Fawwkes/Cegeka_CV.git
-cd app
 ```
 
 **Create and Activate a Virtual Environment**
@@ -29,6 +28,7 @@ pip install -r requirements.txt
 
 **Set the Flask App Environment Variable**
 ```
+cd app
 # On Windows
 set FLASK_APP=app.py
 # On macOS and Linux
@@ -39,8 +39,7 @@ export FLASK_APP=app.py
 ```
 flask run
 ```
-The server usually starts at `http://127.0.0.1:5000/`.
-Re-run flask run after each change within the code.
+The server by default starts at `http://127.0.0.1:5000/`.
 
 **Accessing the Endpoints**
 You can access the API endpoints through a browser or tools like curl or Postman. For example:
