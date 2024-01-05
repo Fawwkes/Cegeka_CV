@@ -14,7 +14,7 @@ class FlaskAPITests(unittest.TestCase):
     def test_get_personal(self):
         response = self.app.get('/personal')
         self.assertEqual(response.status_code, 200)
-        data = json.loads(response.data.decode())
+        data = response.json
         self.assertEqual(data['full_name'], 'Andrei Colhon')
         self.assertEqual(data['phone'], '0746488744')
         self.assertEqual(data['email'], 'andreicolhon28@gmail.com')
@@ -22,7 +22,7 @@ class FlaskAPITests(unittest.TestCase):
     def test_get_experience(self):
         response = self.app.get('/experience')
         self.assertEqual(response.status_code, 200)
-        data = json.loads(response.data.decode())
+        data = response.json
         self.assertEqual(len(data), 2)
         self.assertEqual(data[0]['company'], 'IBM')
         self.assertEqual(data[0]['job_title'], 'Python Engineer')
@@ -36,7 +36,7 @@ class FlaskAPITests(unittest.TestCase):
     def test_get_education(self):
         response = self.app.get('/education')
         self.assertEqual(response.status_code, 200)
-        data = json.loads(response.data.decode())
+        data = response.json
         self.assertEqual(len(data), 2)
 
     def test_export_cv_command(self):
