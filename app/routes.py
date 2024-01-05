@@ -6,15 +6,15 @@ api = Blueprint('api', __name__)
 
 @api.route('/personal', methods=['GET'])
 def get_personal():
-    return jsonify(personal_info)
+    return personal_info
 
 
 @api.route('/experience', methods=['GET'])
 def get_experience():
-    return jsonify(experience)
+    return experience
 
 
 @api.route('/education', methods=['GET'])
 def get_education():
-    return jsonify(education)
+    return education
 
