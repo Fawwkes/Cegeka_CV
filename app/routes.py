@@ -6,15 +6,23 @@ api = Blueprint('api', __name__)
 
 @api.route('/personal', methods=['GET'])
 def get_personal():
-    return personal_info
+    if personal_info:
+        return personal_info
+    else:
+        return jsonify({"error": "Personal information not available"}), 404
 
 
 @api.route('/experience', methods=['GET'])
 def get_experience():
-    return experience
+    if experience:
+        return experience
+    else:
+        return jsonify({"error": "Experience not available"}), 404
 
 
 @api.route('/education', methods=['GET'])
 def get_education():
-    return education
-
+    if education:
+        return education
+    else:
+        return jsonify({"error": "Education not available"}), 404
