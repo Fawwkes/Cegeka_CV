@@ -8,8 +8,8 @@ experience = [
     {
         "company": "IBM",
         "job_title": "Python Engineer",
-        "start_date": "August 2022",
-        "end_date": "Present",
+        "start_date": "01/08/2022",
+        "end_date": None,
         "details": [
             "Built clients for server-side ML inference with Triton Inference Server",
             "PAutomated workflows using Python scripting to extract, transform and load data"
@@ -18,8 +18,8 @@ experience = [
     {
         "company": "Broadridge",
         "title": "Implementation Engineer",
-        "start_date": "August 2020",
-        "end_date": "September 2021",
+        "start_date": "01/08/2020",
+        "end_date": "01/01/2021",
         "details": [
             "Worked as part of the FastTrack team to quickly patch errors in our clients’ trading platforms",
             "Handled integrations between different modules of the clients’ trading platforms"
